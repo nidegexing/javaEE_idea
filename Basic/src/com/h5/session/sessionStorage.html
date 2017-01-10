@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="../../css/mui.min.css" />
+<link rel="stylesheet" href="../../css/rest.css" />
+<link rel="stylesheet" href="../../css/login/login.css" />
+<!--App自定义的css-->
+<link rel="stylesheet" type="text/css" href="../../css/app.css" />
+</head>
+<body>
+	<div style="algin: center; border: 1px solid #F00;width:500px">
+		<table style="margin: auto; border: 1px solid #F00;">
+			<tr>
+				<td><button onclick="set();">Set</button></td>
+				<td><button onclick="get();">Get</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="clean();">Clear</button></td>
+				<td><button>Close</button></td>
+			</tr>
+		</table>
+	</div>
+</body>
+<script type="text/javascript">
+	function set() {
+		alert("set");
+		sessionStorage.setItem("key", "value");
+	};
+	function get() {
+		alert("get");
+		var value = sessionStorage.getItem("key");
+	};
+	function clean() {
+		alert("clean");
+		sessionStorage.removeItem("key");
+	};
+</script>
+</html>
